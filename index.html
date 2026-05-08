@@ -16,7 +16,7 @@
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#f7f2e9;
+background:#e4ebf3; /* lebih calm */
 height:100vh;
 overflow:hidden;
 }
@@ -34,11 +34,11 @@ width:90%;
 max-width:420px;
 max-height:90vh;
 overflow:auto;
-background:#fff;
+background:#ffffff;
 border-radius:26px;
 padding:40px 32px;
 text-align:center;
-box-shadow:0 30px 70px rgba(0,0,0,.15);
+box-shadow:0 30px 70px rgba(30,60,100,.22);
 opacity:0;
 transform:scale(.94) translateY(40px);
 transition:.7s cubic-bezier(.19,1,.22,1);
@@ -46,7 +46,10 @@ pointer-events:none;
 }
 
 .card::-webkit-scrollbar{width:6px}
-.card::-webkit-scrollbar-thumb{background:#e8b4bc;border-radius:10px}
+.card::-webkit-scrollbar-thumb{
+background:#6f8fb8;
+border-radius:10px
+}
 
 .card.active{
 opacity:1;
@@ -57,15 +60,22 @@ pointer-events:auto;
 h1,h2{
 font-family:'DM Serif Display',serif;
 margin:0 0 14px;
+color:#2c3e55;
 }
 
-p{font-size:15px;line-height:1.7;opacity:.85}
+p{
+font-size:15px;
+line-height:1.7;
+opacity:.85;
+color:#3b4f66;
+}
 
 button{
 padding:12px 26px;
 border:none;
 border-radius:999px;
-background:#e8b4bc;
+background:#6f8fb8;
+color:white;
 cursor:pointer;
 margin-top:18px;
 font-size:15px;
@@ -73,7 +83,7 @@ transition:.25s;
 }
 button:hover{
 transform:scale(1.05);
-box-shadow:0 10px 25px rgba(232,180,188,.4);
+box-shadow:0 10px 25px rgba(40,70,120,.35);
 }
 
 /* PIN */
@@ -87,9 +97,11 @@ margin:25px 0;
 width:18px;
 height:18px;
 border-radius:50%;
-border:2px solid #e8b4bc;
+border:2px solid #6f8fb8;
 }
-.dot.fill{background:#e8b4bc}
+.dot.fill{
+background:#6f8fb8
+}
 
 .keypad{
 display:grid;
@@ -110,14 +122,16 @@ gap:12px;
 margin-top:20px;
 }
 #options button{
-background:#f7f2e9;
-border:1px solid #e8b4bc;
+background:#dfe7f0;
+border:1px solid #6f8fb8;
+color:#2c3e55;
 }
 
 .score-box{
 margin-top:22px;
 font-size:15px;
 letter-spacing:.5px;
+color:#2c3e55;
 }
 
 #feedback{
@@ -125,13 +139,15 @@ margin-top:14px;
 min-height:22px;
 font-size:14px;
 transition:.3s;
+color:#2c3e55;
 }
 
 .correctAnim{
 animation:pop .4s ease;
-background:#c7f5d9 !important;
-border-color:#8ee6b2 !important;
+background:#d6e4f5 !important;
+border-color:#6f8fb8 !important;
 }
+
 @keyframes pop{
 0%{transform:scale(.9)}
 60%{transform:scale(1.08)}
@@ -140,7 +156,7 @@ border-color:#8ee6b2 !important;
 
 .wrongAnim{
 animation:shake .4s;
-background:#ffd6d6 !important;
+background:#ffe0e0 !important;
 border-color:#ff9b9b !important;
 }
 
@@ -152,28 +168,30 @@ border-color:#ff9b9b !important;
 
 /* TIMER */
 .lovebox{
-background:linear-gradient(145deg,#fff,#fdecef);
+background:linear-gradient(145deg,#ffffff,#dbe5f2);
 border-radius:22px;
 padding:20px;
 margin-bottom:25px;
-box-shadow:0 12px 35px rgba(232,180,188,.25);
-border:1px solid rgba(232,180,188,.25);
+box-shadow:0 12px 35px rgba(30,60,100,.25);
+border:1px solid rgba(30,60,100,.25);
 }
 
 .timer-title{
 font-size:12px;
 letter-spacing:2px;
 opacity:.6;
+color:#2c3e55;
 }
 
 .timer-display{
 font-family:'DM Serif Display',serif;
 font-size:28px;
 margin-top:8px;
-color:#c97d88;
+color:#4f6f99;
 letter-spacing:1px;
 animation:pulse 2.5s infinite;
 }
+
 @keyframes pulse{50%{opacity:.5}}
 
 /* MEDIA */
@@ -184,9 +202,9 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:20px;
-border:2px dashed #e8b4bc;
+border:2px dashed #6f8fb8;
 cursor:pointer;
-background:#fff8f9;
+background:#eef3f8;
 transition:.3s;
 }
 .reveal-box:hover{transform:scale(1.02)}
@@ -199,7 +217,7 @@ font-size:18px;
 line-height:1.3;
 letter-spacing:.4px;
 text-align:left;
-color:black;
+color:#1e2b3a;
 opacity:.95;
 min-height:100px;
 animation:fadeInText 1.2s ease;
@@ -211,7 +229,7 @@ text-align:right;
 font-family:'Playfair Display',serif;
 font-size:20px;
 letter-spacing:1px;
-color:#b07c83;
+color:#4f6f99;
 animation:fadeInText 1.8s ease;
 }
 
@@ -220,7 +238,6 @@ from{opacity:0;transform:translateY(10px)}
 to{opacity:1;transform:translateY(0)}
 }
 
-/* HEART BACKGROUND */
 canvas{
 position:fixed;
 inset:0;
@@ -240,9 +257,9 @@ pointer-events:none;
 
 <!-- welcome -->
 <section class="card active">
-<h1>Special gift</h1>
-<p>For someone i love the most. <br>But you have to unlock it.</p>
-<button onclick="next()">Unlock</button>
+<h1>hayyie</h1>
+<p>happy mensive selamat bertemu tanggal 11 again</p>
+<button onclick="next()">Continue</button>
 </section>
 
 <!-- pin -->
@@ -282,7 +299,7 @@ Points: <span id="score">0</span> / 3
 <!-- final -->
 <section class="card">
 
-<h1>Another Month of Us</h1>
+<h1>Happy Mensive 5 Bulan, Sayang</h1>
 
 <div class="lovebox">
 <div class="timer-title">TIME WITH YOU</div>
@@ -336,7 +353,7 @@ if(page===2)loadQuestion();
 ================================================= */
 
 let pinInput = '';
-const correctPin = '1402';
+const correctPin = '1011';
 const pinDisplay = document.getElementById("pin");
 
 function renderDots(){
@@ -384,9 +401,9 @@ function checkPin(){
 ================================================= */
 
 const questions=[
-{q:"When did we first meet? ", options:["14 February"," 24 January","22 January"],correct:2},
-{q:"Who loves the most?", options:["You","100% me","Both"],correct:2},
-{q:"What’s on my mind most of the time?", options:["Anime","Someone else","You (my pretty girlfriend"],correct:2}
+{q:"kapan awal kita jadian?", options:["September","oktober","November"],correct:1},
+{q:"tanggal berapa kita jadian?", options:["8","9","11"],correct:2},
+{q:"kita waktu event couple juara berapa?", options:["1","2","3"],correct:0}
 ];
 
 let currentQ = 0;
@@ -451,7 +468,7 @@ function checkAnswer(i,btn){
 
 function startTimer(){
 
-    const start = new Date("2026-01-22T00:00:00");
+    const start = new Date("2025-10-11T00:00:00");
 
     setInterval(()=>{
 
@@ -485,11 +502,7 @@ function revealMemory(el){
     `;
 
     const text = `
-      Even all the beautiful words in the world still wouldn’t be enough to explain how much you mean to me. Yet here you are, right in my life, and somehow that alone says everything. I admire the little things about you—the way you care about me, the way you talk, and how your eyes light up when you’re excited, especially when it’s with me. 
-
-      With you, I’ve found a kind of peace I didn’t even know I was looking for. It’s a kind of comfort I didn’t know I needed until I found it in you. It’s something I can’t find anywhere else, no matter how hard I try. Every moment with you, no matter how small, feels important and meaningful.
-      
-      Thank you for being here with me, for every moment, every word, and every feeling we’ve shared. Happy 2nd mensiversary, sayangku. I’m so grateful for you, today and always. ❤️  
+      happy mensive selamat bertemu kembali ditanggal 11 yang berarti kita sudah 5 bulan, how many times have i said that im happy to get it, kamu satu satu nya orang yang aku pikirin sebelum tidur sampe bangun tidur, maaf mungkin kadang kadang aku buat kamu kesel ataupun marah, so sorry kalo aku ga sempurna kaya orang lain dan mungkin aku ga seperti harapan dan ekspetasi kamu, makasi banyak kamu udah ngajarin aku banyak hal ya walaupun ga banyak tapi bagi aku banyak. kamu terlalu perfect buat aku, ga bisa di jelasin lah, aku bersyukur banget kenal sama kamu. u never know how much i love u n i really lucky for having u babe. i love u to the moon & back i hope we can stay like this. i love u sm bb
       `;
 
     const paragraphs = text.trim().split(/\n\s*\n/);
@@ -568,7 +581,7 @@ function heart(x,y,s){
 function anim(){
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle = "rgba(232,180,188,0.35)";
+    ctx.fillStyle = "rgba(109,160,255,0.35)";
 
     hearts.forEach(h=>{
         heart(h.x,h.y,h.s);
